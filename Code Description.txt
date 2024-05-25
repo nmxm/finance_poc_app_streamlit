@@ -1,0 +1,48 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Homepage: This is the main page of the application. It provides an overview and introduction to the app, explaining its purpose and functionality as well as a graph of the evolution of the price of the considered market index (DJIA).
+
+Main libraries used: yfinance and streamlit.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Data analysis: This page displays the distribution of the returns of the stocks (users may select the stocks of interest as well as the date range) and summary statistics such as the mean return, standard deviation, skewness, kurtosis and the p-value of a Jarque-Bera test (to assess the normality of the data).
+
+Main libraries used: ploty, numpy
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Google - Most words searched: On this page, users can enter a keyword of interest (defaulted to "stock market") to analyze the most popular search queries on Google. Users can choose the number of related queries to display, ranging from 5 to 50.
+
+Main libraries used: TrendReq from pytrends
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Historical Context: This page provides users with comprehensive information about the selected market index, including a graph depicting the evolution of the average stock price, the distribution of market capitalization, and the sector distribution.
+
+Main libraries used: pandas and plotly.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Macroeconomic Factors: This page acts as a central hub for users to access educational resources related to stock market investing. It presents the historical trends and updates on various macroeconomic variables such as GDP, interest rates, inflation, unemployment rate, and consumer confidence. Additionally, it provides the latest economic news to keep users informed about the current state of the economy.
+
+Main libraries used: fredapi,matplotlib, requests and newsapi.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Stock Evolution: This page allows users to customize their selection of stocks based on their interest, the chart type and the date range. By default, all 30 stocks are selected. The page displays a graph illustrating the evolution of stock prices over time for the chosen stocks. Additionally, sentiment scores are calculated by scraping news articles headlines related to each stock, providing insights into the sentiment surrounding the stocks.
+
+Main libraries used: TextBlob, BeautifulSoup and plotly.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Stocks Information: This page provides users with essential information about each stock, including the company name, industry, sector, and additional unique characteristics. It offers a comprehensive overview of the selected stocks. Moreover, the page presents a 2-dimensional graph that considers the market capitalization and dividend yield for each stock. This visualization allows users to compare and analyze stocks based on these important factors. The market capitalization represents the size and value of a company, while the dividend yield indicates the dividend payout relative to the stock price.
+
+Main libraries used: Plotly, yahoo_fin.stock_info and pandas.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3 Forecasting Pages: 
+
+Prophet Predictor: is a model designed to capture seasonality, trends, and holiday effects in the data. It offers features like automatic changepoint detection and flexible seasonality modeling. Prophet is particularly suitable for medium to long-term forecasting tasks, especially when the data exhibits strong seasonal patterns.
+
+Forecasting Dow: Holt-Winters is a classical forecasting model that considers the components of level, trend, and seasonality. It employs exponential smoothing and weighted averages to make predictions. Holt-Winters models can handle both additive and multiplicative seasonality and are often used for short-term forecasting tasks where the data exhibits consistent patterns over time. They are relatively simpler to implement compared to the other mentioned algorithms.In this page the user has the option to select the ticker and forecasting horizon. It is then provided a graph with actual + forecasted prices, buying recommendation and expect gain (%).
+
+Stock price - forecasting: LSTM, on the other hand, is a type of recurrent neural network (RNN) architecture known for its ability to model sequential data effectively. It excels at capturing long-term dependencies and complex patterns in time series data. LSTM models can learn from past observations and adapt to changing patterns, making them well-suited for tasks requiring nonlinear relationships and longer-term forecasts. 
+
+
+Main libraries used: statsmodels.tsa.holtwinters, prophet, tensorflow.keras.models, and tensorflow.keras.layers.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
